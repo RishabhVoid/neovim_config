@@ -10,7 +10,6 @@ return {
       ignore_install = { "lua" },
       highlight = {
         enable = true,
-        disable = { "c", "rust" },
         disable = function(lang, buf)
           local max_filesize = 100 * 1024
           local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))

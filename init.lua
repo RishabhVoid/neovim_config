@@ -1,4 +1,14 @@
 -- Settings
+
+-- Disable indentLine plugin
+vim.g.indentLine_enabled = 0
+
+-- Disable indent-blankline.nvim plugin
+vim.g.indent_blankline_enabled = false
+
+-- Optionally, disable listchars for indentation guides
+vim.opt.list = false
+
 vim.g.mapleader = " "
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
