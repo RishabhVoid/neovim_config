@@ -10,6 +10,23 @@ return {
 		vim.keymap.set("n", "<C-n>", ":Neotree toggle left<CR>", {})
 		vim.keymap.set("n", "<leader>e", ":Neotree focus<CR>", {})
 		require("neo-tree").setup({
+			default_component_configs = {
+				git_status = {
+					symbols = {
+						-- Change type
+						added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
+						modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
+						deleted = "✖", -- this can only be used in the git_status source
+						renamed = "󰁕", -- this can only be used in the git_status source
+						-- Status type
+						untracked = "",
+						ignored = "!",
+						unstaged = "M",
+						staged = "",
+						conflict = "",
+					},
+				},
+			},
 			popup_border_style = "rounded",
 			open_on_setup = true, -- Show NeoTree when setup is called
 			auto_close = true, -- Automatically close NeoTree when opening a file
