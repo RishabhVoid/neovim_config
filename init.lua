@@ -35,8 +35,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins")
-require("leap").create_default_mappings()
+require("lazy").setup("plugins");
 
 -- Global shortcuts
 vim.keymap.set("n", "<C-Left>", ":bprev<CR>", {})
